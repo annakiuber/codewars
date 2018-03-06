@@ -4,4 +4,6 @@ end
 
 def convert(string)
 	array = []
+	conv = string.ord
+	array.push(conv)
 end

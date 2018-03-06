@@ -14,4 +14,11 @@ class Addition_test < Minitest::Test
 		message = "IIIIIAAAAAAMMMMMAAAAMEEESAGE"
 		assert_equal(String, encode(message).class)
 	end
+	def test_returns_array_of_numbers_representing_ascii_code
+		message = "a"
+		assert_equal([97], convert(message))
+	end
+
+		
+
 end
