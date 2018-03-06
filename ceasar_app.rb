@@ -12,3 +12,15 @@ def convert(string)
 	end
  return array
 end
+
+def shift(array)
+	x = 0
+	shifted_array = [] 
+	array.length.times do
+		conv = array[x]+ 5
+		shifted_array.push(conv)
+		x += 1
+	end
+	return shifted_array
+
+end

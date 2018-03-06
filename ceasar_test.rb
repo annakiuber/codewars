@@ -22,7 +22,10 @@ class Addition_test < Minitest::Test
 		message = "abc"
 		assert_equal([97, 98, 99], convert(message))
 	end
-
+	def test_returns_array_of_multiple_numbers_plus5
+		message = [97,98,99]
+		assert_equal([102, 103, 104], shift(message))
+	end
 		
 
 end
