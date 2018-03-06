@@ -5,6 +5,14 @@ def encode(string)
 	return secret
 end
 
+
+def decode(string)
+	converted = convert(string)
+	unshift = unshift(converted)
+	secret = secret_message(unshift)
+end
+
+
 def convert(string)
 	array = []
 	x = 0
@@ -36,7 +44,22 @@ def secret_message(array)
 		message[x] = conv
 		x += 1
 	end
+	return message
+end
 
-return message
+def unshift(array)
+	x = 0
+	shifted_array = [] 
+	array.length.times do
+		conv = array[x] - 5
+		shifted_array.push(conv)
+		x += 1
+	end
+	return shifted_array
 
 end
+
+# puts "give me a message"
+# message = gets.chomp
+# encoded_message = encode(message)
+# puts encoded_message
