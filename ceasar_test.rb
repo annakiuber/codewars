@@ -26,6 +26,11 @@ class Addition_test < Minitest::Test
 		message = [97,98,99]
 		assert_equal([102, 103, 104], shift(message))
 	end
+
+	def test_returns_array_of_numbers_to_string
+		message = [97, 98, 99]
+		assert_equal("abc", secret_message(message))
+	end
 		
 
 end

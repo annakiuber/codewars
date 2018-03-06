@@ -24,3 +24,16 @@ def shift(array)
 	return shifted_array
 
 end
+
+def secret_message(array)
+	message = ""
+	x = 0
+	array.length.times do
+		conv = array[x].chr
+		message[x] = conv
+		x += 1
+	end
+
+return message
+
+end
