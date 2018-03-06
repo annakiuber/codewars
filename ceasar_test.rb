@@ -31,6 +31,10 @@ class Addition_test < Minitest::Test
 		message = [97, 98, 99]
 		assert_equal("abc", secret_message(message))
 	end
+	def test_returns_coded_message
+		message = "abcdefg"
+		assert_equal("fghijkl", encode(message))
+	end
 		
 
 end
