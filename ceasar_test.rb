@@ -10,4 +10,8 @@ class Addition_test < Minitest::Test
 		message = "IIIIIAAAAAAMMMMMAAAAMEEESAGE"
 		assert_equal(String, encode(message).class)
 	end
+	def test_returns_array
+		message = "IIIIIAAAAAAMMMMMAAAAMEEESAGE"
+		assert_equal(String, encode(message).class)
+	end
 end
