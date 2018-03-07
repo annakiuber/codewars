@@ -25,6 +25,8 @@ def convert(string)
 end
 
 def shift(array)
+	# time = time.new
+	# day = time.day
 	x = 0
 	shifted_array = [] 
 	array.length.times do
@@ -33,8 +35,20 @@ def shift(array)
 		x += 1
 	end
 	return shifted_array
-
 end
+def shift_day(array)
+	time = time.new
+	day = time.day
+	x = 0
+	shifted_array = [] 
+	array.length.times do
+		conv = array[x]+ 10
+		shifted_array.push(conv)
+		x += 1
+	end
+	return shifted_array
+end
+
 
 def secret_message(array)
 	message = ""
@@ -48,18 +62,32 @@ def secret_message(array)
 end
 
 def unshift(array)
+	# time = time.new
+	# day = time.day
 	x = 0
 	shifted_array = [] 
 	array.length.times do
-		conv = array[x] - 5
+		conv = array[x]- 5
+		shifted_array.push(conv)
+		x += 1
+	end
+	return shifted_array
+end
+
+def unshift_day(array)
+	time = time.new
+	day = time.day
+	x = 0
+	shifted_array = [] 
+	array.length.times do
+		conv = array[x]+ 10
 		shifted_array.push(conv)
 		x += 1
 	end
 	return shifted_array
 
-end
-
 # puts "give me a message"
 # message = gets.chomp
 # encoded_message = encode(message)
 # puts encoded_message
+end
